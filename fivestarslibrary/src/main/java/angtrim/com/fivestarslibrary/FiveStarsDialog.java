@@ -11,6 +11,7 @@ import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.view.ContextThemeWrapper;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -57,6 +58,7 @@ public class FiveStarsDialog implements DialogInterface.OnClickListener {
     private NegativeReviewListener negativeReviewListener;
     private ReviewListener reviewListener;
     private InAppReviewListener inAppReviewListener;
+    private int dialogTheme;
     private int starColor;
     private String positiveButtonText;
     private String negativeButtonText;
@@ -76,7 +78,7 @@ public class FiveStarsDialog implements DialogInterface.OnClickListener {
     }
 
     private void build() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        AlertDialog.Builder builder = new AlertDialog.Builder(dialogTheme != 0 ? new ContextThemeWrapper(context, dialogTheme) : context);
         LayoutInflater inflater = LayoutInflater.from(context);
         dialogView = inflater.inflate(R.layout.stars, null);
         String titleToAdd = (title == null) ? defaultTitle : title;
@@ -253,6 +255,11 @@ public class FiveStarsDialog implements DialogInterface.OnClickListener {
 
     public FiveStarsDialog setRateText(String rateText) {
         this.rateText = rateText;
+        return this;
+    }
+
+    public FiveStarsDialog setDialogTheme(int theme) {
+        dialogTheme = theme;
         return this;
     }
 
