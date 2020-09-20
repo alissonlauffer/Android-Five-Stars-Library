@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.PorterDuff;
+import android.graphics.ColorFilter;
 import android.graphics.drawable.LayerDrawable;
 import android.net.Uri;
 
@@ -15,6 +15,7 @@ import androidx.appcompat.view.ContextThemeWrapper;
 import androidx.core.graphics.BlendModeColorFilterCompat;
 import androidx.core.graphics.BlendModeCompat;
 
+import android.os.Build;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -103,10 +104,18 @@ public class FiveStarsDialog implements DialogInterface.OnClickListener {
             }
         });
 
-        if (starColor != -1) {
+        if (starColor != 0) {
             LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
-            stars.getDrawable(1).setColorFilter(BlendModeColorFilterCompat.createBlendModeColorFilterCompat(starColor, BlendModeCompat.SRC_ATOP));
-            stars.getDrawable(2).setColorFilter(BlendModeColorFilterCompat.createBlendModeColorFilterCompat(starColor, BlendModeCompat.SRC_ATOP));
+            if (Build.VERSION.SDK_INT >= 21) {
+                int color = context.getResources().getColor(starColor);
+                stars.getDrawable(1).setTint(color);
+                stars.getDrawable(2).setTint(color);
+            }
+            else {
+                ColorFilter color = BlendModeColorFilterCompat.createBlendModeColorFilterCompat(starColor, BlendModeCompat.SRC_ATOP);
+                stars.getDrawable(1).setColorFilter(color);
+                stars.getDrawable(2).setColorFilter(color);
+            }
         }
 
         builder.setTitle(titleToAdd)
