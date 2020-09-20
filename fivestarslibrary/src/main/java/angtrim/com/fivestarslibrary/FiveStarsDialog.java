@@ -12,6 +12,8 @@ import android.net.Uri;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.view.ContextThemeWrapper;
+import androidx.core.graphics.BlendModeColorFilterCompat;
+import androidx.core.graphics.BlendModeCompat;
 
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -103,8 +105,8 @@ public class FiveStarsDialog implements DialogInterface.OnClickListener {
 
         if (starColor != -1) {
             LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
-            stars.getDrawable(1).setColorFilter(starColor, PorterDuff.Mode.SRC_ATOP);
-            stars.getDrawable(2).setColorFilter(starColor, PorterDuff.Mode.SRC_ATOP);
+            stars.getDrawable(1).setColorFilter(BlendModeColorFilterCompat.createBlendModeColorFilterCompat(starColor, BlendModeCompat.SRC_ATOP));
+            stars.getDrawable(2).setColorFilter(BlendModeColorFilterCompat.createBlendModeColorFilterCompat(starColor, BlendModeCompat.SRC_ATOP));
         }
 
         builder.setTitle(titleToAdd)
