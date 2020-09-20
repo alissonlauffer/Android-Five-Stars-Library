@@ -23,17 +23,18 @@ If "Force Mode" is activated, when the user selects 4/5 stars, he is immediately
 To use the library, first include it your project using Gradle
 
 
-    allprojects {
-        repositories {
-            jcenter()
-            maven { url "https://jitpack.io" }
-        }
+```gradle
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
     }
+}
 
-	dependencies {
-	        compile 'com.github.Angtrim:Android-Five-Stars-Library:v3.1'
-	}
-
+dependencies {
+    implementation 'com.github.alissonlauffer:Android-Five-Stars-Library:4.0'
+}
+```
 
 
 ## How to use
