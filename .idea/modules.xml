@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Android-Five-Stars-Library.iml" filepath="$PROJECT_DIR$/.idea/modules/Android-Five-Stars-Library.iml" group="Android-Five-Stars-Library" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sampleapp/Android-Five-Stars-Library-sampleapp.iml" filepath="$PROJECT_DIR$/.idea/modules/sampleapp/Android-Five-Stars-Library-sampleapp.iml" group="Android-Five-Stars-Library/sampleapp" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Procrastinations-Android-Five-Stars-Library.iml" filepath="$PROJECT_DIR$/.idea/modules/Procrastinations-Android-Five-Stars-Library.iml" group="Android-Five-Stars-Library" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fivestarslibrary/com.github.Angtrim-fivestarslibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/fivestarslibrary/com.github.Angtrim-fivestarslibrary.iml" group="Android-Five-Stars-Library/fivestarslibrary" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/fivestarslibrary/fivestarslibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/fivestarslibrary/fivestarslibrary.iml" group="Android-Five-Stars-Library/fivestarslibrary" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sampleapp/sampleapp.iml" filepath="$PROJECT_DIR$/.idea/modules/sampleapp/sampleapp.iml" group="Android-Five-Stars-Library/sampleapp" />
     </modules>
