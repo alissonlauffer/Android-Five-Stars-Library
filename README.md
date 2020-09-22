@@ -32,7 +32,7 @@ allprojects {
 }
 
 dependencies {
-    implementation 'com.github.alissonlauffer:Android-Five-Stars-Library:4.0'
+    implementation 'com.github.alissonlauffer:Android-Five-Stars-Library:4.1'
 }
 ```
 
