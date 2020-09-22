@@ -22,6 +22,7 @@ import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.play.core.review.ReviewInfo;
 import com.google.android.play.core.review.ReviewManager;
 import com.google.android.play.core.review.ReviewManagerFactory;
@@ -82,7 +83,7 @@ public class FiveStarsDialog implements DialogInterface.OnClickListener {
 
     private void build() {
         Context themedContext = dialogTheme != 0 ? new ContextThemeWrapper(context, dialogTheme) : context;
-        AlertDialog.Builder builder = new AlertDialog.Builder(themedContext);
+        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(themedContext);
         LayoutInflater inflater = LayoutInflater.from(themedContext);
         dialogView = inflater.inflate(R.layout.stars, null);
         String titleToAdd = (title == null) ? defaultTitle : title;
