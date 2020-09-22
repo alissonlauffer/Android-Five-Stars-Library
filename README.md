@@ -13,7 +13,7 @@ If "Force Mode" is activated, when the user selects 4/5 stars, he is immediately
 ## Preview
 
 
-<img src="screen.jpeg" alt="preview" width="300" height="533">
+<img src="screen.png" alt="preview" width="300" height="533">
 
 
 
